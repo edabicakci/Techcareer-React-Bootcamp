@@ -1,0 +1,27 @@
+--JS genel döküman (w3)
+https://www.w3schools.com/Js/
+https://developer.mozilla.org/en-US/docs/Web/javascript
+
+--ES6 yenilikler 
+https://www.youtube.com/watch?v=Vp4K03xWsgE
+
+-JS loops
+https://www.w3schools.com/js/js_loop_for.asp
+https://www.w3schools.com/js/js_loop_forof.asp
+https://www.w3schools.com/js/js_loop_while.asp
+
+--Önemli Array Methodlar
+https://www.w3schools.com/jsref/jsref_obj_array.asp
+https://www.youtube.com/watch?v=R8rmfD9Y5-c
+
+--Önemli Array Methodlar ve mutation durumları,
+https://doesitmutate.xyz
+
+--Moment.js (js date kütüphanesi)
+https://momentjs.com/
+
+--northwind link
+https://northwind.vercel.app/
+
+--Önemli 30 css selector
+https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
