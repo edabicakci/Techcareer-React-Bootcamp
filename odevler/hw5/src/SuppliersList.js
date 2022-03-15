@@ -1,5 +1,6 @@
 import React from "react";
 import "./suppliersList.css";
+import Supplier from "./Supplier";
 
 const SuppliersList = ({ suppliers }) => {
   return (
@@ -16,10 +17,7 @@ const SuppliersList = ({ suppliers }) => {
         {suppliers.map((supplier, key) => {
           return (
             <tr key = {key}>
-              <td className="td">{supplier.id}</td>
-              <td className="td">{supplier.companyName}</td>
-              <td className="td">{supplier.contactName}</td>
-              <td className="td">{supplier.address?.city}</td>
+             <Supplier supplier = {supplier}/>
             </tr>
           );
         })}
