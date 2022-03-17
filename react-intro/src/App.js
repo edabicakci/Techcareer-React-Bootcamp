@@ -1,8 +1,8 @@
-import StateSample6 from "./stateSample/StateSample6";
+import AddCategory from "./apiOperations/AddCategory";
 
 function App() {
     return (
-        <StateSample6 />
+        <AddCategory />
     );
 }
 
