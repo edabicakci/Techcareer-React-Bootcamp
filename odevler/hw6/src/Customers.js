@@ -8,7 +8,7 @@ const Customers = () => {
   const [customer, setCustomer] = useState({});
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
-  const [refresh, setRefresh] = useState(false)
+  const [refresh, setRefresh] = useState(false);
 
   const getCustomers = () => {
     fetch("https://northwind.vercel.app/api/customers")
@@ -29,8 +29,8 @@ const Customers = () => {
       contactName: customer.contactName,
       address: {
         city: city,
-        country: country
-      }
+        country: country,
+      },
     };
 
     const config = {
@@ -42,40 +42,35 @@ const Customers = () => {
     };
 
     fetch("https://northwind.vercel.app/api/customers", config)
-    .then((response) => response.json())
-    .then((data) => {
-      setRefresh(prev => !prev)
-      console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-
-
+      .then((response) => response.json())
+      .then((data) => {
+        setRefresh((prev) => !prev);
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   const deleteCustomer = (id) => {
-
     const config = {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-      }
+      },
     };
 
-    fetch(`https://northwind.vercel.app/api/customers ${id}`, config)
-    .then((response) => response.json())
-    .then((data) => {
-      setRefresh(prev => !prev)
-      console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+    fetch(`https://northwind.vercel.app/api/customers/${id}`, config)
+      .then((response) => response.json())
+      .then((data) => {
+        setRefresh((prev) => !prev);
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
 
-
-  }
- 
   return (
     <>
       <div>
@@ -119,13 +114,13 @@ const Customers = () => {
         </tr>
 
         {customers.map((customer, key) => (
-            <tr key={key}>
+          <tr key={key}>
             <td>{customer.id}</td>
             <td>{customer.companyName}</td>
             <td>{customer.contactName}</td>
             <td>{customer.address?.city}</td>
             <td>{customer.address?.country}</td>
-            
+
             <td>
               <button onClick={() => deleteCustomer(customer.id)}>
                 Delete
