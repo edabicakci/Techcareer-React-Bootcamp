@@ -26,7 +26,7 @@ const Customers = () => {
   const addCustomer = () => {
     const newCustomer = {
       companyName: customer.companyName,
-      contactName: customer.companyName,
+      contactName: customer.contactName,
       address: {
         city: city,
         country: country
@@ -50,6 +50,7 @@ const Customers = () => {
     .catch((error) => {
       console.error("Error:", error);
     });
+
 
   };
 
@@ -118,7 +119,7 @@ const Customers = () => {
         </tr>
 
         {customers.map((customer, key) => (
-          <tr key={key}>
+            <tr key={key}>
             <td>{customer.id}</td>
             <td>{customer.companyName}</td>
             <td>{customer.contactName}</td>
