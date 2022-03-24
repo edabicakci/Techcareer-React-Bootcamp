@@ -1,8 +1,15 @@
-import ProductPage from "./contextSample/ProductPage";
+import { CartProvider } from "./contexts/CartContext";
+import { ToDoProvider } from "./contexts/TodoContext";
+import 'antd/dist/antd.css';
+import CustomerForm from "./antDesignSample/CustomerForm";
 
 function App() {
     return (
-        <ProductPage />
+        <ToDoProvider>
+            <CartProvider>
+                <CustomerForm />
+            </CartProvider>
+        </ToDoProvider>
     );
 }
 
